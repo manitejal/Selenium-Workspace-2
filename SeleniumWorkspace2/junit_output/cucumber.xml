@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="29.214">
+<testcase classname="Login" name="Successful login with valid Credentials" time="12.946">
+<system-out><![CDATA[Given User Launched Edge browser............................................passed
+When User opens URL "https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F".passed
+And User enters Email as "admin@yourstore.com" and password as "admin"......passed
+And Click on login..........................................................passed
+Then Page title should be "Dashboard/nopCommerce administration"............passed
+When User click on log out link.............................................passed
+Then Page title should be "Your Strore.Login"...............................passed
+And Closing  browser........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Login Data driven" time="10.605">
+<system-out><![CDATA[Given User Launched Edge browser............................................passed
+When User opens URL "https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F".passed
+And User enters Email as "admin@yourstore.com" and password as "admin"......passed
+And Click on login..........................................................passed
+Then Page title should be "Dashboard/nopCommerce administration"............passed
+When User click on log out link.............................................passed
+Then Page title should be "Your Strore.Login"...............................passed
+And Closing  browser........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Login Data driven 2" time="5.225">
+<failure message="" type="java.lang.AssertionError"><![CDATA[Given User Launched Edge browser............................................passed
+When User opens URL "https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F".passed
+And User enters Email as "admin1@yourstore.com" and password as "admin123"..passed
+And Click on login..........................................................passed
+Then Page title should be "Dashboard/nopCommerce administration"............failed
+When User click on log out link.............................................skipped
+Then Page title should be "Your Strore.Login"...............................skipped
+And Closing  browser........................................................skipped
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at StepDefinitions.NopCommerceLoginpage.page_title_should_be(NopCommerceLoginpage.java:45)
+	at ✽.Page title should be "Dashboard/nopCommerce administration"(file:///C:/SeleniumWorkspace2/Feature/NopCommerce.feature:18)
+]]></failure>
+</testcase>
+</testsuite>
